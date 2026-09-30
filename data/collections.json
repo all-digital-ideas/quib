@@ -1,0 +1,21 @@
+[
+  { "slug": "new-arrivals", "source": "new-arrival", "limit": 40, "title": "New Arrivals", "description": "Fresh off the cutting table. The latest silhouettes, prints and fabrics of the season." },
+  { "slug": "best-sellers", "source": "best-selling-products", "limit": 40, "title": "Best Sellers", "description": "The pieces our customers keep coming back for." },
+  { "slug": "designer-shirts", "source": "designer-shirts", "limit": 32, "title": "Designer Shirts", "description": "Embroidery, cut-and-sew panels and statement detailing, made in limited runs." },
+  { "slug": "plain-shirts", "source": "plain-shirts", "limit": 24, "title": "Plain Shirts", "description": "Solid colours in premium cotton. The foundation of every wardrobe." },
+  { "slug": "printed-shirts", "source": "printed-shirts", "limit": 24, "title": "Printed Shirts", "description": "Digital and hand-drawn prints with character, from subtle to unapologetic." },
+  { "slug": "check-shirts", "source": "checks-shirts", "limit": 24, "title": "Check Shirts", "description": "Glen checks, box checks and tartans, cut for an easy regular fit." },
+  { "slug": "stripe-shirts", "source": "stripe-shirts", "limit": 24, "title": "Stripe Shirts", "description": "Crisp stripes that move from the boardroom to the weekend." },
+  { "slug": "over-shirts", "source": "over-shirts", "limit": 24, "title": "Over Shirts", "description": "Heavier cloth, relaxed shoulders. The layer that finishes the look." },
+  { "slug": "t-shirts", "source": "t-shirts", "limit": 32, "title": "T-Shirts", "description": "Knitted polos and classic tees with a clean, tailored line." },
+  { "slug": "trousers", "source": "trousers", "limit": 32, "title": "Trousers", "description": "Gurkha waists, formal pleats and relaxed corduroy. Tailored from the waist down." },
+  { "slug": "co-ords", "source": "co-ords", "limit": 24, "title": "Co-Ords", "description": "Matching sets designed to be worn together, or apart." },
+  { "slug": "club-wear", "source": "club-wear", "limit": 32, "title": "Club Wear", "description": "Satin finishes and after-dark detailing for nights that run late." },
+  { "slug": "dynamic-looks", "source": "hot-look", "limit": 24, "title": "Dynamic Looks", "description": "Bold pieces for men who dress with intent." },
+  { "slug": "travel-wear", "source": "resort-collection", "limit": 24, "title": "Travel Wear", "description": "Breathable, easy-care shirts made for airports, coastlines and everything between." },
+  { "slug": "formal", "source": "formal-elegance", "limit": 24, "title": "Formal Elegance", "description": "Sharp collars and refined cottons for the working week." },
+  { "slug": "casual", "source": "daily-wear", "limit": 24, "title": "Daily Wear", "description": "Everyday shirts that ask for very little and give a lot back." },
+  { "slug": "premium", "source": "the-foomer-lux", "limit": 24, "title": "The Lux Edit", "description": "Our finest cottons, finished with hand-carved mother-of-pearl buttons." },
+  { "slug": "street", "source": "urban-chic", "limit": 24, "title": "Urban Chic", "description": "City-ready pieces with a looser, more expressive attitude." },
+  { "slug": "sale", "source": "sale", "limit": 40, "title": "Sale", "description": "Last sizes and final reductions. Once they're gone, they're gone." }
+]

@@ -1,14 +1,16 @@
 {
-  "name": "fashion",
+  "name": "quib-fashion",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "sync": "node scripts/sync-catalog.mjs"
   },
   "dependencies": {
+    "motion": "^13.4.6",
     "next": "16.3.7",
     "react": "19.2.8",
     "react-dom": "19.2.8"
