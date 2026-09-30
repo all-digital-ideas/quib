@@ -1,36 +1,37 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Quib Fashion — premium menswear storefront
 
-## Getting Started
-
-First, run the development server:
+Next.js 16 (App Router) · TypeScript · Tailwind CSS 4 · Motion.
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run dev      # http://localhost:3000
+npm run build    # static build (every product and collection page is prerendered)
+npm run sync     # refresh data/catalog.json from the live store's product feed
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Set `NEXT_PUBLIC_SITE_URL` to the production domain so canonical URLs, the sitemap and structured data point at it.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Where things live
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Path | What it holds |
+| --- | --- |
+| `lib/site.ts` | Brand, contact details, announcement copy, homepage section order, editorial image picks |
+| `data/collections.json` | Collections to sync: site slug, source collection handle, title, description |
+| `data/catalog.json` | Generated product snapshot (do not edit by hand; run `npm run sync`) |
+| `lib/catalog.ts` | The only module that reads the catalog. Swap its internals to move to a live API |
+| `lib/store.ts` | Cart, wishlist and recently viewed (localStorage) |
+| `lib/seo.tsx` | JSON-LD builders: Organization, WebSite, Product, BreadcrumbList |
+| `data/journal.ts`, `data/help.ts` | Journal articles and policy pages |
+| `components/` | UI, one component per file |
+| `app/(store)` | All storefront routes, sharing the header, footer and cart drawer |
+| `app/(checkout)` | Checkout, with no navigation around it |
 
-## Learn More
+## Not wired up yet
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Checkout** collects details and shows a confirmation, but does not create an order or take payment (`components/CheckoutForm.tsx`).
+- **Newsletter** shows a success state without sending the address anywhere (`components/Newsletter.tsx`).
+- **Ratings** are placeholders generated in `scripts/sync-catalog.mjs`; they are excluded from structured data.
+- **Size guide** measurements in `components/SizeSelector.tsx` are indicative.
+- **Shipping fee** below the free-shipping threshold (`shippingFee` in `lib/site.ts`) is an assumed value.
+- **Privacy and Terms** copy in `data/help.ts` is a draft.
+- **Accounts** are a placeholder page.
+# quib
