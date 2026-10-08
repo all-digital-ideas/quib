@@ -3,6 +3,7 @@ import CategoryMarquee from "@/components/CategoryMarquee";
 import CollectionSection from "@/components/CollectionSection";
 import EditorialSection from "@/components/EditorialSection";
 import FeaturedCollection from "@/components/FeaturedCollection";
+import GallerySection from "@/components/GallerySection";
 import Hero from "@/components/Hero";
 import Journal from "@/components/Journal";
 import Newsletter from "@/components/Newsletter";
@@ -11,6 +12,7 @@ import SocialGallery from "@/components/SocialGallery";
 import StyleCategories from "@/components/StyleCategories";
 import { articles } from "@/data/journal";
 import { collectionHref, coverImage, editorialProduct, getCards, getCollection, toCard } from "@/lib/catalog";
+import { getGalleryItems } from "@/lib/gallery";
 import { site } from "@/lib/site";
 
 const CAROUSEL_SIZE = 10;
@@ -103,6 +105,8 @@ export default function HomePage() {
           />
         ))}
       </div>
+
+      <GallerySection items={getGalleryItems()} />
 
       <Journal
         entries={articles.map((a) => ({

@@ -128,6 +128,7 @@ export const footerNav = [
     heading: "Company",
     links: [
       { label: "About", href: "/about" },
+      { label: "Gallery", href: "/gallery" },
       { label: "Journal", href: "/journal" },
       { label: "Privacy", href: "/help/privacy" },
       { label: "Terms", href: "/help/terms" },
